@@ -1,1 +1,11 @@
-/* Add CSS Styling */
+/* 1. Target the element with BOTH 'avatar' and 'proportioned' */
+.avatar.proportioned {
+  width: 300px;
+  height: auto; /* Keeps the square ratio without hardcoding height */
+}
+
+/* 2. Target the element with BOTH 'avatar' and 'distorted' */
+.avatar.distorted {
+  width: 200px;
+  height: 400px; /* Hardcoded to twice the width to create the squish effect */
+}
