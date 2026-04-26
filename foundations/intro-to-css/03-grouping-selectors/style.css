@@ -1,1 +1,17 @@
-/* Add CSS Styling */
+/* Grouping Selector: Shared styles for both buttons */
+.primary-button,
+.secondary-button {
+  font-size: 28px;
+  font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+/* Unique style for the first button */
+.primary-button {
+  background-color: rgb(0, 0, 0); /* Black */
+  color: #ffffff;                 /* White text */
+}
+
+/* Unique style for the second button */
+.secondary-button {
+  background-color: #ffff00;      /* Yellow */
+}
