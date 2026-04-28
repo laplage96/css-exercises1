@@ -2,41 +2,43 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.para,
-.small-para {
+/* 1. General Paragraph style first */
+.para {
   color: hsl(0, 0%, 0%);
   font-weight: 800;
-}
-
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.para {
   font-size: 22px;
 }
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
+/* 2. Specific Paragraph style second (to override size) */
+.small-para {
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+  font-size: 14px;
+}
 
+/* 3. Base button style first */
 .button {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
+/* 4. Specific button overrides second */
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
 }
 
-div.text {
+/* 5. Base text style */
+.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+}
+
+/* 6. Specific child style (Chained to ensure it wins) */
+.text.child {
+  font-weight: 800;
+  font-size: 14px;
 }
