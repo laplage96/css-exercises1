@@ -7,21 +7,39 @@ body {
   width: 400px;
   background: #fff;
   margin: 16px auto;
+  /* This ensures our internal spacing doesn't make the card wider than 400px */
+  box-sizing: border-box;
+  /* Adding a bit of padding to the card itself */
+  padding: 10px;
+  border: 1px solid #ccc;
 }
 
 .title {
   background: #e3f4ff;
+  /* Space inside the blue title box */
+  padding: 6px;
+  /* Space between the title and the content div */
+  margin-bottom: 12px;
+  font-size: 24px;
 }
 
 .content {
   background: #e3f4ff;
+  /* Space inside the blue content box */
+  padding: 14px;
+  /* Space between content and the button container */
+  margin-bottom: 12px;
 }
 
 .button-container {
   background: #e3f4ff;
+  /* Padding creates the space around the button inside the blue area */
+  padding: 8px;
+  text-align: center;
 }
 
-button {
-  background: white;
-  border: 1px solid #eee;
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 24px;
 }
