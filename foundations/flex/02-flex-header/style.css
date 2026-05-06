@@ -1,6 +1,12 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+
+  /* Flexbox logic */
+  display: flex;
+  justify-content: space-between; /* Pushes items to the far left, center, and right */
+  align-items: center;            /* Centers everything vertically */
+
 }
 
 .logo {
@@ -9,17 +15,36 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+
+  /* Ensures logo text is centered if it expands */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  /* Shared styling for both navigation lists */
+  margin: 0;
+  padding: 0;
+
+  /* Flexbox logic for horizontal list items */
+  display: flex;
+  gap: 8px;           /* Adds consistent space between links */
+  align-items: center;
 }
 
+/* Individual Link Styling */
 a {
   font-size: 22px;
   background: white;
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
+  color: #333;
+  transition: background 0.3s;
+}
+a:hover {
+  background: #f0f0f0;
 }
