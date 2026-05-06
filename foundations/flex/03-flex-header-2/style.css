@@ -12,6 +12,21 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+  /* 1. Main container alignment */
+  display: flex;
+  justify-content: space-between; /* Pushes left and right groups apart */
+  align-items: center;            /* Requirement: Centered vertically */
+  padding: 8px;                   /* Requirement: 8px space from edges */
+}
+
+
+/* Grouping containers for left and right elements */
+.left-side, 
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 16px;                      /* Requirement: 16px between each item */
 }
 
 .profile-image {
@@ -45,4 +60,10 @@ a {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+  /* 2. Horizontal list items */
+  display: flex;
+  gap: 16px;
 }
