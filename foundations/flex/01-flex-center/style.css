@@ -3,6 +3,11 @@
   border: 4px solid midnightblue;
   width: 400px;
   height: 300px;
+
+  /* Added these lines */
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
 }
 
 .box {
