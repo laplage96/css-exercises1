@@ -20,6 +20,11 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+
+  /* 1. Split the Modal into Icon (left) and Content (right) */
+  display: flex;
+  padding: 16px;   /* Requirement: Padding around the edge */
+  gap: 16px;       /* Requirement: Equal space on both sides of icon */
 }
 
 .icon {
@@ -31,8 +36,41 @@ body {
   height: 42px;
   border-radius: 50%;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
+}
+
+.content {
+  /* 3. Stack text and buttons vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header-container {
+  /* 4. Align header and 'X' button in a row */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.button-group {
+  /* 5. Align Continue/Cancel buttons horizontally */
+  display: flex;
+  gap: 12px;
 }
 
 .close-button {
