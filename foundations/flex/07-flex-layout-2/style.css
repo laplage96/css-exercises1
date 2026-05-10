@@ -1,29 +1,76 @@
+/* 1. The Vertical Stack (The Bread) */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stacks header, middle, and footer */
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;    /* Vertically centers "MY AWESOME WEBSITE" */
+  padding: 0 16px;        /* 16px from the edge */
 }
 
+/* 2. The Horizontal Middle (The Meat) */
+.middle-container {
+  display: flex;
+  flex: 1;                /* Requirement: Takes up all available space */
+}
+
+/* 4. The Footer (The Bottom Bread) */
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  justify-content: center; /* Requirement: Horizontally centered */
+  align-items: center;     /* Requirement: Vertically centered */
 }
 
 .sidebar {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  flex-shrink: 0;         /* Requirement: Sidebar does not shrink */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style: none;       /* Requirement: Remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;  /* Requirement: No underline */
+}
+
+/* 3. The Responsive Card Area */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;        /* Requirement: Cards wrap when room runs out */
+  gap: 32px;              /* Space between cards */
+  padding: 48px;          /* Requirement: 48px padding around section */
+  flex: 1;                /* Fills the rest of the horizontal space */
+  background: #f9f9f9;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  width: 200px;           /* Set a width so they know when to wrap */
+  padding: 16px;
+  background: white;
 }
